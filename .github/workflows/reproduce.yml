@@ -2,6 +2,13 @@ name: Reproduce datasets and results
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "run_all.py"
+      - "scripts/**"
+      - "requirements.txt"
+      - ".github/workflows/reproduce.yml"
 
 permissions:
   contents: write

@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this reconstructed synthetic experiment package, please cite the associated AI-QNSF manuscript and record the exact version used."
+title: "AI-QNSF Reconstructed Synthetic Experiment"
+version: 1.0.0
+date-released: 2026-11-12
+type: software
+abstract: >
+  Reconstructed synthetic feature-level benchmark supporting a proposed
+  source-aware AI-assisted quantum-network security design. The package
+  includes deterministic generators, primary and independent synthetic
+  datasets, run-level evaluation scripts, results, environment metadata,
+  and integrity checks. It is not an exact reproduction of an earlier
+  unarchived experiment and does not model physical QKD operation.

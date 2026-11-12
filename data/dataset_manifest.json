@@ -1,0 +1,57 @@
+{
+  "status": "RECONSTRUCTED_NEW_SYNTHETIC_EXPERIMENT_NOT_ORIGINAL_REPRODUCTION",
+  "generator_version": "1.0.0",
+  "primary": {
+    "rows": 36000,
+    "runs": 120,
+    "runs_per_class": 20,
+    "seed": 20261104,
+    "sha256": "f374738452853ee7641ff26fb6304eff2003d846f13056a4f43f5036b620977f",
+    "class_counts": {
+      "channel_disturbance": 1255,
+      "control_plane_tampering": 1407,
+      "detector_anomaly": 1274,
+      "intercept_resend_proxy": 1191,
+      "normal": 29569,
+      "telemetry_dropout": 1304
+    }
+  },
+  "independent": {
+    "rows": 54000,
+    "runs": 180,
+    "runs_per_class": 30,
+    "seed": 20261105,
+    "sha256": "440d5aaf5717b141d61f63956dc72d9887aee27995fe48ac7b3e328a97d01b70",
+    "class_counts": {
+      "channel_disturbance": 2413,
+      "control_plane_tampering": 2033,
+      "detector_anomaly": 1979,
+      "intercept_resend_proxy": 2000,
+      "normal": 43428,
+      "telemetry_dropout": 2147
+    }
+  },
+  "features": [
+    "qber",
+    "key_rate",
+    "channel_loss",
+    "detector_efficiency",
+    "dark_count_rate",
+    "authentication_failures",
+    "configuration_events",
+    "latency_ms",
+    "synchronisation_error",
+    "telemetry_missing_fraction",
+    "telemetry_age_ms",
+    "channel_noise",
+    "optical_power"
+  ],
+  "metadata_excluded_from_model_inputs": [
+    "run_id",
+    "time_index",
+    "distance_km",
+    "scenario",
+    "label"
+  ],
+  "note": "Generated feature-level assumptions; no QKD physics, photons, live telemetry, network simulator, or hardware are modelled."
+}

@@ -1,0 +1,40 @@
+{
+  "split": 0,
+  "model": "RandomForest_cross_generator",
+  "target_validation_fpr": 0.01,
+  "threshold": 0.7288516319628441,
+  "accuracy_multiclass": 0.6732962962962963,
+  "binary_accuracy": 0.7201666666666666,
+  "macro_f1_multiclass": 0.3629132960382065,
+  "binary_precision": 0.3687315634218289,
+  "binary_attack_recall": 0.6030079455164585,
+  "binary_f1": 0.45762894368472057,
+  "binary_fpr": 0.25131251726996406,
+  "binary_roc_auc": 0.7569844949047138,
+  "binary_average_precision": 0.43557431934546637,
+  "tn": 32514,
+  "fp": 10914,
+  "fn": 4197,
+  "tp": 6375,
+  "source_validation_threshold_target": "1%",
+  "source_training_runs": 72,
+  "source_validation_runs": 24,
+  "independent_test_runs": 180,
+  "bootstrap_ci": {
+    "attack_f1": {
+      "lower_2_5": 0.43044936528862426,
+      "upper_97_5": 0.48409747092343725,
+      "mean": 0.4575640612371725
+    },
+    "fpr": {
+      "lower_2_5": 0.2157583551744968,
+      "upper_97_5": 0.28291521331963493,
+      "mean": 0.24904768677945074
+    },
+    "attack_recall": {
+      "lower_2_5": 0.5682215472910168,
+      "upper_97_5": 0.6327291582915178,
+      "mean": 0.6005215301661105
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "project": "AI-QNSF reconstructed synthetic feature-level experiment",
+  "version": "1.0.0",
+  "provenance": "New reconstruction from the manuscript's written methodology; not the unarchived original experiment",
+  "primary_generator": {"rows": 36000, "runs": 120, "runs_per_scenario": 20, "observations_per_run": 300, "seed": 20261104, "attack_event_duration_seconds": "25-100"},
+  "independent_generator": {"rows": 54000, "runs": 180, "runs_per_scenario": 30, "observations_per_run": 300, "seed": 20261105, "attack_event_duration_seconds": "30-115"},
+  "model_features": ["qber", "key_rate", "channel_loss", "detector_efficiency", "dark_count_rate", "authentication_failures", "configuration_events", "latency_ms", "synchronisation_error", "telemetry_missing_fraction", "telemetry_age_ms", "channel_noise", "optical_power"],
+  "excluded_metadata": ["run_id", "time_index", "distance_km", "scenario", "label"],
+  "classes": ["normal", "channel_disturbance", "intercept_resend_proxy", "detector_anomaly", "control_plane_tampering", "telemetry_dropout"],
+  "evaluation": {
+    "repeats": 10,
+    "runs_per_split": {"train": 72, "validation": 24, "test": 24},
+    "per_scenario_split": {"train": 12, "validation": 4, "test": 4},
+    "models": {
+      "RandomForestClassifier": {"n_estimators": 100, "max_features": "sqrt", "min_samples_leaf": 2, "class_weight": "balanced_subsample"},
+      "IsolationForest": {"n_estimators": 100, "contamination": "auto", "fit_data": "normal training rows only"},
+      "QBER_only": {"score": "qber"}
+    },
+    "validation_normal_fpr_targets": [0.005, 0.01, 0.02],
+    "split_seed_base": 7319,
+    "cross_generator_source_validation_target": 0.01,
+    "cross_generator_bootstrap_resamples": 200,
+    "bootstrap_unit": "run clusters, stratified by scenario"
+  },
+  "non_claims": ["not a physical QKD experiment", "not a quantum network simulator", "not an exact reproduction of earlier manuscript results", "no photon-level or protocol-level simulation", "no full AI-QNSF A/K/E/V risk fusion, uncertainty U, or response controller validation"]
+}

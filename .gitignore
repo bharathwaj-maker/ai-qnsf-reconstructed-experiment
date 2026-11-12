@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+_work/
+ai_qnsf_eval_chunks_*/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,21 @@
+{
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "scikit_learn": "1.8.0",
+  "execution_platform": "Linux x86_64",
+  "random_forest_estimators": 100,
+  "isolation_forest_estimators": 100,
+  "primary_repeats": 10,
+  "bootstrap_resamples_cross_generator": 200,
+  "primary_generator_seed": 20261104,
+  "independent_generator_seed": 20261105,
+  "split_seed_base": 7319,
+  "evaluation_batches": [3, 3, 3, 1],
+  "reproduction_note": "The full documented command python run_all.py completed successfully in the recorded local execution environment. An independent GitHub Actions run is pending until manually triggered.",
+  "full_pipeline_command": "python run_all.py",
+  "primary_run_repeats": 10,
+  "evaluation_batch_repeats": [3, 3, 3, 1],
+  "independent_generator_bootstrap_resamples": 200,
+  "full_pipeline_exit_status": 0
+}

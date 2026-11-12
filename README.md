@@ -30,7 +30,7 @@ The workflow needs repository Actions write access to commit the generated outpu
 
 ## Reproduce locally
 
-Python 3.13.5 is the recorded environment. Install pinned dependencies:
+The successful GitHub-hosted clean run used Python 3.13.18. For local reproduction, use Python 3.13.x and install the pinned dependencies:
 
 ```bash
 python -m venv .venv
